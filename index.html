@@ -98,6 +98,32 @@
             top: 0;
         }
 
+        /* Fun Fact Button Styling */
+        button {
+            background-color: #4A90E2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: block;
+            margin: 20px 0;
+        }
+
+        button:hover {
+            background-color: #357ABD;
+            transform: scale(1.05);
+        }
+
+        #funFact {
+            font-size: 1.2rem;
+            margin-top: 15px;
+            font-style: italic;
+            color: #555;
+        }
+
         /* Footer Styling */
         footer {
             background-color: #333;
@@ -135,6 +161,10 @@
             h2 {
                 font-size: 1.8rem;
             }
+
+            button {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -157,25 +187,25 @@
     <section id="about">
         <h2>Om mig</h2>
         <p>Hej! Jeg er professionel edger. Jeg er meget passioneret omkring stedet jeg gør det og hvem der er i nærheden, og jeg elsker at arbejde med fremmede.</p>
+
+        <!-- Fun Fact Button -->
+        <button onclick="showFact()">Vis et fun fact om mig</button>
+        <p id="funFact"></p>
+
+        <script>
+            const facts = [
+                "Jeg kan lave helikopteren i flere timer uafbrudt",
+                "Jeg har engang drukket 15 litter liv (guds nektar)",
+                "Jeg elsker filmen Gayniggers From Outer Space",
+                "Jeg har set en rigtig negermand (Travis)"
+            ];
+
+            function showFact() {
+                const randomFact = facts[Math.floor(Math.random() * facts.length)];
+                document.getElementById('funFact').textContent = randomFact;
+            }
+        </script>
     </section>
-
-    <!-- Tilføj i din About sektion -->
-<button onclick="showFact()">Vis en tilfældig sjov fact</button>
-<p id="funFact"></p>
-
-<script>
-    const facts = [
-        "Jeg kan lave helikopteren i flere timer uafbrudt",
-        "Jeg er racist",
-        "Jeg elsker filmen Gayniggers from outer space",
-        "Jeg har set en rigtig negermand (travis)"
-    ];
-
-    function showFact() {
-        const randomFact = facts[Math.floor(Math.random() * facts.length)];
-        document.getElementById('funFact').textContent = randomFact;
-    }
-</script>
 
     <!-- Skills Section -->
     <section id="skills">
