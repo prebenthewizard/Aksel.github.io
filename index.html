@@ -159,6 +159,24 @@
         <p>Hej! Jeg er professionel edger. Jeg er meget passioneret omkring stedet jeg gør det og hvem der er i nærheden, og jeg elsker at arbejde med fremmede.</p>
     </section>
 
+    <!-- Tilføj i din About sektion -->
+<button onclick="showFact()">Vis en tilfældig sjov fact</button>
+<p id="funFact"></p>
+
+<script>
+    const facts = [
+        "Jeg kan jonglere med 3 bolde!",
+        "Jeg har spist 15 pandekager på én gang.",
+        "Jeg gik engang 10 km for at få en is.",
+        "Jeg har rullet 100 meter ned ad en bakke for sjov."
+    ];
+
+    function showFact() {
+        const randomFact = facts[Math.floor(Math.random() * facts.length)];
+        document.getElementById('funFact').textContent = randomFact;
+    }
+</script>
+
     <!-- Skills Section -->
     <section id="skills">
         <h2>Mine Færdigheder</h2>
